@@ -1,14 +1,13 @@
 <template lang="">
-  <div>
-    <AppHeader />
-    <AppMain />
-  </div>
+<AppHeader />
+<AppMain />
 </template>
 
 <script>
 import { store } from './assets/js/store';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
+
 export default {
   data() {
     return {
