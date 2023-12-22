@@ -35,6 +35,11 @@ export default {
             store,
         }
     },
+    methods: {
+        // getFlag(){
+
+        // }
+    },
 }
 </script>
 <style lang="">

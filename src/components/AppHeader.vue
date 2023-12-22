@@ -5,7 +5,7 @@
             <a class="navbar-brand">Boolflix</a>
             <!-- <form class="d-flex" role=""> -->
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" v-model='searchUsers'>
-                <button class="btn btn-outline-success" type="submit" @click='store.getFilm(searchUsers)'>Search</button>
+                <button class="btn btn-outline-success" type="submit" @click='store.getFilm(searchUsers)' @click='store.getSerie(searchUsers)'>Search</button>
             <!-- </form> -->
         </div>
 </nav>
@@ -26,7 +26,7 @@ export default {
        
     },
     created() {
-        // this.getFilm();
+        
     },
 }
 </script>

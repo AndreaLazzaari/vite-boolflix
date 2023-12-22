@@ -3,17 +3,18 @@ import axios from 'axios';
 
 export const store = reactive({
     filmList : [],
-    apiUrl: 'https://api.themoviedb.org/3/search/movie',
+    serieList: [],
+    apiFilmUrl: 'https://api.themoviedb.org/3/search/movie',
     apiKey: 'dbeb26ebf395d596dd90cfd3f886c89f',
-    
+    apiSerieUrl: 'https://api.themoviedb.org/3/search/tv',
 
-    getFilm(searcContent = ''){
-        console.log(searcContent)
+    getFilm(searchContent = ''){
+        console.log(searchContent)
 
-        axios.get(this.apiUrl, {
+        axios.get(this.apiFilmUrl, {
             params: {
               api_key: this.apiKey,
-              query: searcContent,
+              query: searchContent,
             }
           })
 
@@ -21,6 +22,28 @@ export const store = reactive({
                 // handle success
                 console.log(response);
                 this.filmList = response.data.results
+                
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            });
+        },
+
+    getSerie(searchContent = ''){
+        console.log(searchContent)
+        
+        axios.get(this.apiSerieUrl, {
+            params: {
+              api_key: this.apiKey,
+              query: searchContent,
+            }
+          })
+
+            .then((response) => {
+                // handle success
+                console.log(response);
+                // this.serieList = response.data.results
                 
             })
             .catch(function (error) {
