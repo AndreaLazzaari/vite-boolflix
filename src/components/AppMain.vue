@@ -1,9 +1,27 @@
 <template lang="">
     <main>
         <div>
-            <article v-for='film in store.filmList'>
-                {{ film.title }}
-            </article>
+            <div class='container'>
+                <div class='row'>
+                    <div class="card" style="width: 18rem;" v-for='film in store.filmList'>
+                        <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ film.title }}</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Titolo originale:{{ film.original_title }}</li>
+                                    <li class="list-group-item">Lingua: {{ film.original_language }} </li>
+                                    <li class="list-group-item">Voto: {{ film.vote_average }} </li>
+                                </ul>
+                            <!-- <div class="card-body">
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div> -->
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </main>
 </template>
