@@ -22,6 +22,7 @@ export const store = reactive({
                 // handle success
                 console.log(response);
                 this.filmList = response.data.results
+                console.log(response.data.results)
                 
             })
             .catch(function (error) {
@@ -43,7 +44,8 @@ export const store = reactive({
             .then((response) => {
                 // handle success
                 console.log(response);
-                // this.serieList = response.data.results
+                this.serieList = response.data.results
+                console.log(response.data.results)
                 
             })
             .catch(function (error) {
